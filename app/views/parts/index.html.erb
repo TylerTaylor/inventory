@@ -1,0 +1,6 @@
+<% @parts.each do |part| %>
+  <h2><%= link_to part.title, part %></h2>
+  <p><%= part.description %></p>
+<% end %>
+
+<%= link_to "New Part", new_part_path %>
