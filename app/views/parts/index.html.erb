@@ -1,4 +1,5 @@
 <% @parts.each do |part| %>
+  <p><%= image_tag part.image.url(:medium) %></p>
   <h2><%= link_to part.title, part %></h2>
   <p><%= part.description %></p>
 <% end %>

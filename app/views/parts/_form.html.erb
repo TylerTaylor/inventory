@@ -1,4 +1,5 @@
-<%= simple_form_for @part do |f| %>
+<%= simple_form_for @part, url: parts_path do |f| %>
+  <%= f.input :image, as: :file %>
   <%= f.input :title, label: "Part" %>
   <%= f.input :description, label: "Part Number" %>
   <%= f.button :submit %>

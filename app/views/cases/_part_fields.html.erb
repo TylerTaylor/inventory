@@ -1,0 +1,8 @@
+<%= f.label "Parts list" %><br />
+<%= f.collection_check_boxes :title, Part.all, :id, :title do |b| %>
+  <div class="collection-check-box">
+    <%= b.check_box %>
+    <%= b.label %>
+    <%= number_field_tag :quantity %>
+  </div>
+<% end %>

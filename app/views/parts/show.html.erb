@@ -1,6 +1,8 @@
 <h2><%= @part.title %></h2>
 <p><%= @part.description %></p>
 
+<%= image_tag @part.image.url(:medium) %>
+
 <%= link_to "Back", root_path %>
 <%= link_to "Edit", edit_part_path(@part) %>
 <%= link_to "Delete", part_path(@part), method: :delete, data: { confirm: "Are you sure?" } %>

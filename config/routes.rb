@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :parts
-  root 'parts#index'
+  devise_for :users
+  resources :parts, :products
+  root 'products#index'
 end

@@ -1,0 +1,7 @@
+<% @products.each do |p| %>
+  <p><%= image_tag p.image.url(:medium) %></p>
+  <h2><%= link_to p.title, p %></h2>
+  <p><%= p.description %></p>
+<% end %>
+
+<%= link_to "New Case", new_product_path %>

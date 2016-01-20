@@ -1,0 +1,9 @@
+<%= simple_form_for @product, html: { multipart: true } do |f| %>
+  <%= f.input :image, as: :file %>
+  <%= f.input :title, label: "Case" %>
+  <%= f.input :description, label: "Parts" %>
+
+  <%= f.collection_check_boxes :part_ids, Part.all, :id, :title %>
+  <%= f.submit %>
+
+<% end %>

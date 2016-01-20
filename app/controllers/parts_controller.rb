@@ -40,7 +40,7 @@ class PartsController < ApplicationController
   private
 
     def part_params
-      params.require(:part).permit(:title, :description)
+      params.require(:part).permit(:title, :description, :image, :quantity, :parts_id)
     end
 
     def find_part
